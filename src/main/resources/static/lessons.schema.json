@@ -116,6 +116,12 @@
                             "description": "A demonstration: each note is shown as it plays and nothing is asked."
                           }
                         }
+                      },
+                      "beatsPerLine": {
+                        "type": "integer",
+                        "minimum": 2,
+                        "maximum": 16,
+                        "description": "Overrides the chapter's beats per line, for a lesson in its own taalam."
                       }
                     },
                     "anyOf": [
@@ -132,9 +138,25 @@
                       }
                     ]
                   }
+                },
+                "ragam": {
+                  "type": "string",
+                  "enum": [
+                    "mayamalavagowla",
+                    "sankarabharanam"
+                  ],
+                  "description": "Ragam for the swarams. Defaults to mayamalavagowla."
                 }
               }
             }
+          },
+          "ragam": {
+            "type": "string",
+            "enum": [
+              "mayamalavagowla",
+              "sankarabharanam"
+            ],
+            "description": "Ragam for the swarams. Defaults to mayamalavagowla."
           }
         }
       }

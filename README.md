@@ -182,7 +182,8 @@ The curriculum is in `src/main/resources/static/lessons.json`. No code changes a
 ```
 
 - **Stage**: a group of chapters that adds one new idea. Only the stage being worked on starts open.
-- **Chapter**: `secondsPerBeat` sets the tempo (1 is 60 beats a minute). `beatsPerLine` sets the taalam cycle and defaults to 8.
+- **Chapter**: `secondsPerBeat` sets the tempo (1 is 60 beats a minute). `beatsPerLine` sets the taalam cycle and defaults to 8. A stage or chapter can set `ragam` (`mayamalavagowla`, the default, or `sankarabharanam`); a lesson can set its own `beatsPerLine`.
+- **Speed and akaram**: every lesson can be played in first, second or third speed and sung on swara names or on 'aa'; these are choices on the lesson page, not separate lessons.
 - **Swaras**: `S R G M P D N`. Add `'` for the upper octave (`S'`) and `.` for the lower (`N.`). A comma holds the previous swaram one more beat and `|` separates lines.
 - **Listening game**: instead of `swaras`, give a `title` and `"listen": {"intervals": [7, 4], "same": false, "rounds": 8}`. Two notes within one octave play and the learner answers up, down or same; only then are the notes shown on a ladder. `intervals` are jump sizes in semitones (7 Sa to Pa, 4 Sa to Ga, 2 Sa to Ri, 1 Ga to Ma). With `"demo": true` the notes are shown as they play and nothing is asked.
 - **Theory**: optional. Three or four lines shown above the lesson to make it interesting.

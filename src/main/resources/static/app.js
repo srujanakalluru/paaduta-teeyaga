@@ -1,7 +1,7 @@
 import { decode, startRecording, wav } from './audio.js';
-import { CONTEXT_SECONDS, DEFAULT_SA, LEAD_SECONDS, LOWEST_SA, MAX_SECONDS, NBSP, PROGRESS_KEY, SA_CHOICES, SA_KEY, STEP_GAP, VOICE_RATE, ZOOMS } from './constants.js';
+import { CONTEXT_SECONDS, DEFAULT_SA, LEAD_SECONDS, LOWEST_SA, MAX_SECONDS, NBSP, KAALAMS, PROGRESS_KEY, SA_CHOICES, SA_KEY, STEP_GAP, VOICE_RATE, ZOOMS } from './constants.js';
 import { drawChart, drawLive } from './chart.js';
-import { CHAPTERS, LESSONS, STAGES, SYLLABLES } from './lessons.js';
+import { AKARAM, CHAPTERS, LESSONS, STAGES, SYLLABLES } from './lessons.js';
 import { drawStaff, westernName } from './staff.js';
 import { startListen, stopListen } from './listen.js';
 import { sing } from './voice.js';
@@ -10,7 +10,7 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const API_BASE = $('meta[name="api-base"]').content;
 
-const state = { reference: null, user: null, takes: [], current: 0, request: null, zoom: 2, cursor: 0, keyShift: null, live: { reference: [], user: [] }, lesson: null, tonic: null };
+const state = { reference: null, user: null, takes: [], current: 0, request: null, zoom: 2, cursor: 0, keyShift: null, live: { reference: [], user: [] }, lesson: null, tonic: null, scale: null, speed: 1, akaram: false };
 const players = { reference: new Audio(), user: new Audio() };
 let chart, stopRecording, recordTimer, playback, staffNotes = [];
 
@@ -225,7 +225,12 @@ function startLesson(lesson) {
     });
   }
   resetUser();
+  state.scale = lesson.scale;
+  const seconds = (state.seconds = lesson.seconds / state.speed);
   $('h3', card).textContent = lesson.name;
+  Object.assign($('.ragam', card), { hidden: false, textContent: `Ragam ${lesson.ragam}` });
+  $('.options', card).hidden = false;
+  renderOptions(lesson);
   Object.assign($('#setup .theory'), { hidden: !lesson.theory });
   $('#setup .theory p:last-child').textContent = lesson.theory ?? '';
   $('.row', card).hidden = true;
@@ -234,21 +239,38 @@ function startLesson(lesson) {
     element('span', { textContent: step.swara + ' ,'.repeat(step.beats - 1) }), element('small', { textContent: westernName(step.note) }))));
   const staff = $('.staff', card);
   staff.removeAttribute('hidden');
-  staffNotes = drawStaff(staff, lesson.steps, lesson.seconds, state.tonic, lesson.cycle);
+  staffNotes = drawStaff(staff, lesson.steps, seconds, state.tonic, lesson.cycle);
   let beat = 0;
   state.live.reference = phrase.flatMap(({ note, beats }) => {
-    const start = LEAD_SECONDS + beat * lesson.seconds, end = start + beats * lesson.seconds;
+    const start = LEAD_SECONDS + beat * seconds, end = start + beats * seconds;
     beat += beats;
     return [[start, note], [end - STEP_GAP, note], [end, null]];
   });
   drawLiveFor('reference');
-  const voice = sing(phrase, lesson.seconds);
+  const voice = sing(state.akaram ? phrase.map((step) => ({ ...step, syllable: AKARAM })) : phrase, seconds);
   load('reference', wav(voice.wet, VOICE_RATE), wav(voice.dry, VOICE_RATE));
+}
+
+// Every exercise can be sung in three speeds, and on 'aa' (akaram) instead of the swara names.
+function renderOptions(lesson) {
+  const choices = (host, options, current, pick) => $(host).replaceChildren(...options.map(([label, value]) => {
+    const choice = button(label, () => pick(value), '');
+    choice.setAttribute('aria-pressed', value === current);
+    return choice;
+  }));
+  const restart = () => {
+    stopPlayback();
+    startLesson(lesson);
+  };
+  choices('#kaalam', KAALAMS, state.speed, (speed) => { state.speed = speed; restart(); });
+  choices('#voicing', [['Swaras', false], ['Akaram', true]], state.akaram, (akaram) => { state.akaram = akaram; restart(); });
 }
 
 function clearSession() {
   const card = $('#reference'), audio = $('audio', card);
-  Object.assign(state, { lesson: null, tonic: null, reference: null, takes: [], keyShift: null });
+  Object.assign(state, { lesson: null, tonic: null, scale: null, reference: null, takes: [], keyShift: null });
+  $('#reference .ragam').hidden = true;
+  $('#reference .options').hidden = true;
   state.live.reference = [];
   $('h3', card).textContent = 'Reference';
   $('.row', card).hidden = false;
@@ -347,7 +369,7 @@ function route() {
 
 function followSwaras() {
   const audio = $('#reference audio');
-  const beat = (audio.currentTime - LEAD_SECONDS) / (state.lesson?.seconds ?? 1);
+  const beat = (audio.currentTime - LEAD_SECONDS) / (state.seconds ?? 1);
   let start = 0;
   const now = audio.paused || !state.lesson || beat < 0 ? -1 : state.lesson.steps.findIndex((step) => beat < (start += step.beats));
   $$('#reference .swaras li').forEach((chip, i) => chip.classList.toggle('on', i === now));
@@ -359,9 +381,9 @@ function drawLiveFor(slot) {
   const canvas = $(`#${slot} canvas`), first = (points) => points.find(([, m]) => m != null)?.[0] ?? 0;
   canvas.hidden = false;
   const reference = { points: state.live.reference, shift: 0, color: '--ref', width: 4, labelled: slot === 'reference' };
-  if (slot === 'reference') return drawLive(canvas, [reference], state.tonic);
+  if (slot === 'reference') return drawLive(canvas, [reference], state.tonic, state.scale);
   const points = state.live.user;
-  drawLive(canvas, [reference, { points, shift: first(state.live.reference) - first(points), transpose: -(state.keyShift ?? 0), color: '--you', width: 2.5, labelled: true }], state.tonic);
+  drawLive(canvas, [reference, { points, shift: first(state.live.reference) - first(points), transpose: -(state.keyShift ?? 0), color: '--you', width: 2.5, labelled: true }], state.tonic, state.scale);
 }
 
 async function toggleRecording(slot) {
@@ -536,6 +558,7 @@ function drawResultsChart() {
   chart = drawChart($('#chart'), r, {
     pxPerSecond: ZOOMS[state.zoom],
     tonic: state.tonic,
+    scale: state.scale,
     onSelect: (t) => {
       state.cursor = t;
       chart.playhead(t);

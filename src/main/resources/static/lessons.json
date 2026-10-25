@@ -91,7 +91,7 @@
             },
             {
               "swaras": "R , , ,",
-              "theory": "Ri is Rishabham, likened to the call of a bull. In the 72-melakarta system Ri comes in three varieties; the one you are singing belongs to Sankarabharanam."
+              "theory": "Ri is Rishabham, likened to the call of a bull. Carnatic music has three varieties of Ri; in Mayamalavagowla, the ragam of these lessons, you sing shuddha Ri, just a half step above Sa."
             },
             {
               "swaras": "G , , ,",
@@ -116,6 +116,16 @@
             {
               "swaras": "S' , , ,",
               "theory": "Upper Sa completes the seven swarams, the saptaswaras, named in the Natya Shastra some 2,000 years ago. It vibrates exactly twice as fast as Sa, so it is home again, one octave higher."
+            },
+            {
+              "title": "Sa Pa Sa",
+              "swaras": "S , , , P , , , S , , ,",
+              "theory": "Every lesson begins by tuning to the sruti. An old saying calls sruti the mother of music and laya, rhythm, its father. Sa Pa Sa is the sound of the sruti itself."
+            },
+            {
+              "title": "Sa Pa upper Sa",
+              "swaras": "S , , , P , , , S' , , ,",
+              "theory": "The tambura is usually tuned Pa, upper Sa, upper Sa, lower Sa, so Sa, Pa and upper Sa are exactly what it sounds behind every Carnatic singer."
             }
           ]
         }
@@ -250,11 +260,11 @@
           "lessons": [
             {
               "swaras": "S R G M P D N S'",
-              "theory": "These notes form Dheerasankarabharanam, melakarta 29. Melakarta names hide their number: in the old katapayadi code the syllables 'dhee' and 'ra' stand for 9 and 2, read backwards as 29."
+              "theory": "These notes form Mayamalavagowla, melakarta 15. Melakarta names hide their number: in the old katapayadi code 'ma' is 5 and 'ya' is 1, read backwards as 15."
             },
             {
               "swaras": "S' N D P M G R S",
-              "theory": "Traditionally the first lessons use Mayamalavagowla, melakarta 15 ('ma' 5, 'ya' 1, read backwards), as Purandara Dasa chose. We use Sankarabharanam here because it is easier on a new ear."
+              "theory": "Purandara Dasa chose Mayamalavagowla for first lessons. Its two halves mirror each other, each with a half step at both ends, which makes the scale balanced and easy to hear."
             }
           ]
         },
@@ -481,104 +491,156 @@
               "title": "Janta Varasa 2",
               "swaras": "S S R R G G R R | S S R R G G M M | R R G G M M G G | R R G G M M P P | G G M M P P M M | G G M M P P D D | M M P P D D P P | M M P P D D N N | P P D D N N D D | P P D D N N S' S' | S' S' N N D D N N | S' S' N N D D P P | N N D D P P D D | N N D D P P M M | D D P P M M P P | D D P P M M G G | P P M M G G M M | P P M M G G R R | M M G G R R G G | M M G G R R S S",
               "theory": "The Maharaja's music college in Vizianagaram, founded in 1919, trained many great Telugu musicians. The violinist Dwaram Venkataswamy Naidu was among its famous teachers."
+            },
+            {
+              "title": "Janta Varasa 3",
+              "swaras": "S S R R G G M M | R R G G M M P P | G G M M P P D D | M M P P D D N N | P P D D N N S' S' | S' S' N N D D P P | N N D D P P M M | D D P P M M G G | P P M M G G R R | M M G G R R S S",
+              "theory": "Janta practice builds sphuritam, one of the ten classical gamakams, where the second of a pair of notes gets a gentle push from below. Here the pairs climb four at a time."
+            },
+            {
+              "title": "Janta Varasa 4",
+              "swaras": "S S R R S S R R | S S R R G G M M | R R G G R R G G | R R G G M M P P | G G M M G G M M | G G M M P P D D | M M P P M M P P | M M P P D D N N | P P D D P P D D | P P D D N N S' S' | S' S' N N S' S' N N | S' S' N N D D P P | N N D D N N D D | N N D D P P M M | D D P P D D P P | D D P P M M G G | P P M M P P M M | P P M M G G R R | M M G G M M G G | M M G G R R S S",
+              "theory": "Purandara Dasa's lessons travelled with the Haridasas, wandering singers who carried devotional songs across South India from the 15th century onward. This Varasa repeats each pair before moving on."
             }
           ]
         }
       ]
     },
     {
-      "title": "Beyond one octave",
-      "about": "Step below the lower Sa and above the upper Sa.",
+      "title": "Leaping notes",
+      "about": "Dhatu Varasa: patterns that jump between swarams instead of stepping, so each note must be found fresh.",
       "chapters": [
         {
-          "title": "Mandra and Tara Sthayi",
-          "hint": "Keep the tone the same in every octave. Sing low notes gently and high notes lightly.",
-          "secondsPerBeat": 1,
-          "lessons": [
-            {
-              "swaras": "S N.",
-              "theory": "Mandra sthayi is the lower octave, written with a dot below. The Sangita Ratnakara says low notes come from the chest; let them feel warm and unforced."
-            },
-            {
-              "swaras": "N. D. N. S",
-              "theory": "The tambura's lowest string is tuned to the lower Sa, so Carnatic singers have always had a low anchor to sink into. Low notes come from ease, not force."
-            },
-            {
-              "swaras": "S N. D. P.",
-              "theory": "Men and women sing the same ragams from different Sa's. Because each singer chooses their own Sa, Carnatic music has no fixed key, unlike much Western music."
-            },
-            {
-              "swaras": "P. D. N. S R G",
-              "theory": "Musicians call this tristhana shuddhi: a voice equally clean in all three octaves. It has long been praised as the mark of a great singer."
-            },
-            {
-              "swaras": "S' R' S'",
-              "theory": "Tara sthayi is the upper octave, written with a dot above. The Sangita Ratnakara places high notes in the head; keep them light."
-            },
-            {
-              "swaras": "N S' R' S' N",
-              "theory": "M. S. Subbulakshmi, the first musician to receive the Bharat Ratna, sang at the United Nations General Assembly in 1966. Her effortless upper notes are still a model for singers."
-            },
-            {
-              "swaras": "P D N S' R' S' N D P",
-              "theory": "Annamacharya of Tallapaka composed thousands of Telugu sankirtanas for Lord Venkateswara in the 15th century. Many of them rise into this upper range at their peak."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Rhythm cycles",
-      "about": "Patterns set to a taalam other than eight beats.",
-      "chapters": [
-        {
-          "title": "Triputa Taalam Alankaram",
-          "hint": "Triputa taalam has seven beats: three, then two, then two.",
+          "title": "Dhatu Varasa",
+          "hint": "Hear the next note in your head before you jump to it.",
           "secondsPerBeat": 0.8,
-          "beatsPerLine": 7,
           "lessons": [
+            {
+              "title": "Dhatu Varasa 1 - going up",
+              "swaras": "S M G M R G S R | R P M P G M R G | G D P D M P G M | M N D N P D M P | P S' N S' D N P D",
+              "theory": "In Carnatic terms dhatu is the music of a song and matu its words. A composer who creates both, like Annamacharya or Tyagaraja, is honoured as a vaggeyakara."
+            },
+            {
+              "title": "Dhatu Varasa 1 - coming down",
+              "swaras": "S' P D P N D S' N | N M P M D P N D | D G M G P M D P | P R G R M G P M | M S R S G R M G",
+              "theory": "The same leaps from the top. Coming down by leaps tends to fall flat, so aim each landing slightly high in your mind."
+            },
+            {
+              "title": "Dhatu Varasa 1",
+              "swaras": "S M G M R G S R | R P M P G M R G | G D P D M P G M | M N D N P D M P | P S' N S' D N P D | S' P D P N D S' N | N M P M D P N D | D G M G P M D P | P R G R M G P M | M S R S G R M G",
+              "theory": "The full Dhatu Varasa. Leaping cleanly without sliding is what lets a singer place a gamakam exactly where the ragam wants it."
+            },
+            {
+              "title": "Dhatu Varasa 2",
+              "swaras": "S G R M | G P M D | P N D S' | S' , , , | S' D N P | D M P G | M R G S | S , , ,",
+              "theory": "Leaps of a third outline a ragam's shape. Ramaswami Dikshitar, father of Muthuswami Dikshitar, is credited with creating ragam Hamsadhwani, which is built on bright leaps like these."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Low and high",
+      "about": "Mandra and Tara Sthayi Varasas: stretch the voice gently below Sa and above upper Sa.",
+      "chapters": [
+        {
+          "title": "Mandra Sthayi",
+          "hint": "Sing low notes gently. Low voice comes from ease, not force.",
+          "secondsPerBeat": 0.9,
+          "lessons": [
+            {
+              "title": "Mandra Sthayi Varasa 1",
+              "swaras": "S N. D. P. D. N. S , | S N. D. P. D. N. S , | S R G R S N. D. P. | D. N. S R S , , ,",
+              "theory": "Mandra sthayi, the lower octave, is written with a dot below. The Sangita Ratnakara says low notes come from the chest; try this one in Akaram too, singing only 'aa'."
+            },
+            {
+              "title": "Mandra Sthayi Varasa 2",
+              "swaras": "S N. D. P. M. P. D. N. | S N. D. P. M. P. D. N. | S N. S R G R S N. | D. P. D. N. S , , ,",
+              "theory": "This goes down to the lower Ma. If it is too low for your voice, pick a higher Sa on the Lessons page; Carnatic music lets every singer choose their own Sa."
+            }
+          ]
+        },
+        {
+          "title": "Tara Sthayi",
+          "hint": "Keep high notes light. Stop if your throat tightens.",
+          "secondsPerBeat": 0.9,
+          "lessons": [
+            {
+              "title": "Tara Sthayi Varasa 1",
+              "swaras": "S R G M P D N S' | S' R' S' R' S' , , , | S' R' G' R' S' N D P | S' N D P M G R S",
+              "theory": "Tara sthayi, the upper octave, is written with a dot above. Teachers traditionally leave it until the voice is settled, because forcing high notes strains an untrained voice."
+            },
+            {
+              "title": "Tara Sthayi Varasa 2",
+              "swaras": "S R G M P D N S' | S' R' G' M' G' R' S' , | S' R' G' R' S' N D P | S' N D P M G R S",
+              "theory": "The Sangita Ratnakara places high notes in the head. Range grows slowly with practice, so treat the top note as a visit, not a push."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Alankaram",
+      "about": "Seven patterns, one for each of the seven Suladi taalams, so rhythm and melody are learned together.",
+      "chapters": [
+        {
+          "title": "Sapta Taala Alankarams",
+          "hint": "Clap the taalam while you sing: a clap and finger counts for each laghu, a clap and a wave for each drutam.",
+          "secondsPerBeat": 0.8,
+          "lessons": [
+            {
+              "title": "Eka Taalam Alankaram",
+              "swaras": "S R G M | R G M P | G M P D | M P D N | P D N S' | S' N D P | N D P M | D P M G | P M G R | M G R S",
+              "beatsPerLine": 4,
+              "theory": "Eka taalam is a single laghu, four beats in chaturasra jaati, the simplest of the seven. Eka simply means one."
+            },
+            {
+              "title": "Rupaka Taalam Alankaram",
+              "swaras": "S R S R G M | R G R G M P | G M G M P D | M P M P D N | P D P D N S' | S' N S' N D P | N D N D P M | D P D P M G | P M P M G R | M G M G R S",
+              "beatsPerLine": 6,
+              "theory": "Rupaka taalam here is a drutam then a laghu: six beats. Purandara Dasa's first geetham, Sri Gananatha, is set in Rupaka taalam."
+            },
             {
               "title": "Triputa Alankaram - going up",
               "swaras": "S R G S R G M | R G M R G M P | G M P G M P D | M P D M P D N | P D N P D N S'",
+              "beatsPerLine": 7,
               "theory": "Alankaram means ornament. Purandara Dasa set seven Alankarams, one for each of the seven Suladi taalams, so students learn the rhythms by singing them."
             },
             {
               "title": "Triputa Alankaram - coming down",
               "swaras": "S' N D S' N D P | N D P N D P M | D P M D P M G | P M G P M G R | M G R M G R S",
+              "beatsPerLine": 7,
               "theory": "This one is in Tisra jaati Triputa taalam: 3 + 2 + 2 = 7 beats. Clap on beats 1, 4 and 6. The seven taalams combine with five jaatis, or beat counts, to make 35 taalams."
             },
             {
               "title": "Triputa Taalam Alankaram",
               "swaras": "S R G S R G M | R G M R G M P | G M P G M P D | M P D M P D N | P D N P D N S' | S' N D S' N D P | N D P N D P M | D P M D P M G | P M G P M G R | M G R M G R S",
+              "beatsPerLine": 7,
               "theory": "Mridangam players learn these taalams with spoken syllables such as 'ta ka di mi'. This spoken rhythm, called konnakol, can be a concert item in its own right."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Picking up speed",
-      "about": "The same exercises at twice the pace, rendava kaalam. Come here only once the slow versions pass cleanly.",
-      "chapters": [
-        {
-          "title": "Rendava kaalam (second speed)",
-          "hint": "Faster, but every note still lands in tune.",
-          "secondsPerBeat": 0.5,
-          "lessons": [
-            {
-              "title": "Sarali Varasa 1 - rendava kaalam",
-              "swaras": "S R G M P D N S' | S' N D P M G R S",
-              "theory": "Carnatic music uses three speeds, or kaalams: prathama, dwitiya and tritiya, each double the one before. Teachers traditionally ask for every Varasa in all three."
             },
             {
-              "title": "Sarali Varasa 3 - rendava kaalam",
-              "swaras": "S R G S R G S R | S R G M P D N S' | S' N D S' N D S' N | S' N D P M G R S",
-              "theory": "Speed without clarity is not the goal. The violinist Lalgudi Jayaraman was famous for making even his fastest passages sound like singing."
+              "title": "Matya Taalam Alankaram",
+              "swaras": "S R G R S R S R G M | R G M G R G R G M P | G M P M G M G M P D | M P D P M P M P D N | P D N D P D P D N S' | S' N D N S' N S' N D P | N D P D N D N D P M | D P M P D P D P M G | P M G M P M P M G R | M G R G M G M G R S",
+              "beatsPerLine": 10,
+              "theory": "Matya taalam is laghu, drutam, laghu: ten beats here. The seven taalams are called the Suladi Sapta Taalas, after the suladi songs of the Haridasas."
             },
             {
-              "title": "Janta Varasa 1 - rendava kaalam",
-              "swaras": "S S R R G G M M | P P D D N N S' S' | S' S' N N D D P P | M M G G R R S S",
-              "theory": "After Varasas and Alankarams come geethams, then swarajatis and varnams, and finally kritis. You have now walked the same first steps as five centuries of Carnatic musicians."
+              "title": "Jhampa Taalam Alankaram",
+              "swaras": "S R G S R S , R G M | R G M R G R , G M P | G M P G M G , M P D | M P D M P M , P D N | P D N P D P , D N S' | S' N D S' N S' , N D P | N D P N D N , D P M | D P M D P D , P M G | P M G P M P , M G R | M G R M G M , G R S",
+              "beatsPerLine": 10,
+              "theory": "Jhampa taalam in misra jaati is a seven-beat laghu, a one-beat anudrutam and a two-beat drutam. Of the seven taalams, only Jhampa uses the anudrutam."
+            },
+            {
+              "title": "Dhruva Taalam Alankaram",
+              "swaras": "S R G M G R S R G R S R G M | R G M P M G R G M G R G M P | G M P D P M G M P M G M P D | M P D N D P M P D P M P D N | P D N S' N D P D N D P D N S' | S' N D P D N S' N D N S' N D P | N D P M P D N D P D N D P M | D P M G M P D P M P D P M G | P M G R G M P M G M P M G R | M G R S R G M G R G M G R S",
+              "beatsPerLine": 14,
+              "theory": "Dhruva taalam is laghu, drutam, laghu, laghu: 14 beats, the longest of the seven. Dhruva means fixed and steady, like the pole star of the same name."
+            },
+            {
+              "title": "Ata Taalam Alankaram",
+              "swaras": "S R , G , S R G M , S R G M | R G , M , R G M P , R G M P | G M , P , G M P D , G M P D | M P , D , M P D N , M P D N | P D , N , P D N S' , P D N S' | S' N , D , S' N D P , S' N D P | N D , P , N D P M , N D P M | D P , M , D P M G , D P M G | P M , G , P M G R , P M G R | M G , R , M G R S , M G R S",
+              "beatsPerLine": 14,
+              "theory": "Ata taalam is laghu, laghu, drutam, drutam; in khanda jaati that is 5 + 5 + 2 + 2 = 14 beats. Many varnams, the milestone after geethams, are sung in Ata taalam."
             }
           ]
         }

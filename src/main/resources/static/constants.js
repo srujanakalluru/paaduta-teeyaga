@@ -22,6 +22,13 @@ export const MIN_NOTE_SECONDS = 0.15;
 export const NOTE_GAP_SECONDS = 0.25;
 export const SARGAM = ['Sa', 'Ri♭', 'Ri', 'Ga♭', 'Ga', 'Ma', 'Ma♯', 'Pa', 'Da♭', 'Da', 'Ni♭', 'Ni'];
 export const SCALE = [0, 2, 4, 5, 7, 9, 11];
+// Semitones above Sa for the swarams that vary; Sa and Pa never change.
+export const RAGAMS = {
+  mayamalavagowla: { name: 'Mayamalavagowla', R: 1, G: 4, M: 5, D: 8, N: 11 },
+  sankarabharanam: { name: 'Sankarabharanam', R: 2, G: 4, M: 5, D: 9, N: 11 },
+};
+export const DEFAULT_RAGAM = 'mayamalavagowla';
+export const KAALAMS = [['First speed', 1], ['Second speed', 2], ['Third speed', 4]];
 
 export const FOLD_FRAMES = 10;
 export const MAX_JUMP = 7;
@@ -63,6 +70,7 @@ export const CONSONANTS = {
   p: { closure: 0.05, voice: 0, burst: 0.05, loci: [400, 900, 2300] },
   d: { closure: 0.04, voice: 0.2, burst: 0.05, loci: [350, 1700, 2600] },
   n: { closure: 0.07, voice: 0.45, loci: [250, 1600, 2600] },
+  '': { closure: 0, voice: 1, loci: [] },
 };
 
 export const STEP_GAP = 0.05;

@@ -210,6 +210,9 @@ button:active { transform: scale(.97); }
 .segmented button { min-height: 34px; padding: 0 18px; border-radius: 8px; background: none; color: var(--text); font-size: 15px; }
 .segmented [aria-selected=true], .segmented [aria-pressed=true] { background: var(--surface); box-shadow: 0 1px 4px rgba(0, 0, 0, .12); font-weight: 600; }
 #keys { margin-top: 16px; }
+#reference .ragam { margin: 2px 0 0; }
+#reference .options { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+#reference .options .segmented { margin: 0; }
 
 .summary { margin-top: 32px; }
 .summary h2 { margin: 2px 0 0; font-size: clamp(30px, 5vw, 44px); }
